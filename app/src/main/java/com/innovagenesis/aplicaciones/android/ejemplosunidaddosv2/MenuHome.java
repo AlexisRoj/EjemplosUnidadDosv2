@@ -44,6 +44,8 @@ public class MenuHome extends Fragment {
         ListView listView = (ListView)view.findViewById(R.id.menu_listView);
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener();
+
         return view;
     }
 
