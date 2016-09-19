@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">EjemplosUnidadDosv2</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="menuTitleString">
+
+        <item>Simple ListView</item>
+        <item>Custom ListView</item>
+        <item>Simple Spinner</item>
+        <item>Custom Spinner</item>
+
+    </string-array>
+
+    <string-array name="descrMenuString">
+
+        <item>Ej. simple Listview</item>
+        <item>Ej. custom Listview</item>
+        <item>Ej. simple Spinner</item>
+        <item>Ej. custom Spinner</item>
+
+    </string-array>
+</resources>
