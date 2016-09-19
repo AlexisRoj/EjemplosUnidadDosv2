@@ -14,6 +14,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    Fragment fragment = new MenuHome();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,24 +23,25 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final MiscelaneosFragment cambiar = new MiscelaneosFragment();
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        assert fab != null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                cambiar.remplazarFragment(fragment,MainActivity.this).commit();
             }
         });
 
 
 
         // Se declara el home
-        Fragment fragment = new MenuHome();
 
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction =
-                fm.beginTransaction().replace(R.id.fragment, fragment);
-        fragmentTransaction.commit();
+        cambiar.remplazarFragment(fragment,MainActivity.this).commit();
+
+
 
     }
 
