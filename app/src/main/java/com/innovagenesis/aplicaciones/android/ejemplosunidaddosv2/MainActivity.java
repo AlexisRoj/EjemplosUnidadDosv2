@@ -35,13 +35,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-        // Se declara el home
+        /** Se utiliza clase generica para cambiar fragments, este metodo se usa para
+         * toda la aplicacion                                                         **/
 
         cambiar.remplazarFragment(fragment,MainActivity.this).commit();
-
-
 
     }
 

@@ -62,12 +62,16 @@ public class MenuHome extends Fragment {
 
                switch (position){
 
-                   case 1:{
-                       fragment = new CustomListView();
+                   case 0:{
+                       /** Ejecuta el ejemplo de un ListView simple **/
+                       fragment = new SimpleListView();
                        cambiar.remplazarFragment(fragment,getActivity()).commit();
                        break;
                    }
-                   case 2: {
+                   case 1: {
+                       /** Ejecuta el ejemplo de un ListView custom **/
+                       fragment = new CustomListView();
+                       cambiar.remplazarFragment(fragment,getActivity()).commit();
                        break;
                    }
 

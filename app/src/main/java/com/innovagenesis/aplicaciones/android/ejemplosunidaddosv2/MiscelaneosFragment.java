@@ -4,17 +4,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 
-/**
- * Created by Alexis on 19/9/2016.
- */
+
 public class MiscelaneosFragment {
 
     public MiscelaneosFragment() {
     }
 
     public FragmentTransaction remplazarFragment(Fragment fragment, FragmentActivity activity) {
+
+        /** Encargada de cambiar los fragments en el contenedor **/
 
         FragmentManager fm = activity.getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();

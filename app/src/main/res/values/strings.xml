@@ -22,4 +22,25 @@
         <item>Ej. custom Spinner</item>
 
     </string-array>
+
+
+    <string-array name="horario_de_clases">
+        <item>Matematicas</item>
+        <item>Ciencias naturales</item>
+        <item>Ciencias sociales</item>
+        <item>Lengua castellana</item>
+        <item>Musica</item>
+        <item>Quimica</item>
+    </string-array>
+
+    <string-array name="dias_semana">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sabado</item>
+    </string-array>
+
+
 </resources>
