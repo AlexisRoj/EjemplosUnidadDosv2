@@ -36,6 +36,7 @@ public class MenuHome extends Fragment {
         final String [] titleMenu = getActivity().getResources().getStringArray(R.array.menuTitleString);
         String [] descrMenu = getActivity().getResources().getStringArray(R.array.descrMenuString);
 
+
         ArrayList<CapturaDatos> lista = new ArrayList<> ();
 
         for (int i = 0; i < titleMenu.length; i ++){
@@ -48,9 +49,7 @@ public class MenuHome extends Fragment {
         ListView listView = (ListView)view.findViewById(R.id.menu_listView);
         listView.setAdapter(adapter);
 
-
         /** Se implementa el onItemClick para ejecutar los diferentes Fragments**/
-
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -81,16 +80,9 @@ public class MenuHome extends Fragment {
                        cambiar.remplazarFragment(fragment,getActivity()).commit();
                        break;
                    }
-
-
                }
-
-
-
             }
         });
-
         return view;
     }
-
 }

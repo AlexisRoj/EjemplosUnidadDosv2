@@ -14,7 +14,9 @@ import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.contenedores.D
 import java.util.List;
 
 /**
- * utiliza un template para llenar el ListView
+ * utiliza un template para llenar el ListView incialmente se crea una clase para llenar el
+ * Spinner y el ListView por aparte pero si los dos tienen los mismos datos se puede usar el
+ * mismo
  */
 public class DiaHorarioAdapter extends ArrayAdapter<DiaHorario> {
     public DiaHorarioAdapter(Context context, List<DiaHorario> objetos) {
@@ -23,6 +25,9 @@ public class DiaHorarioAdapter extends ArrayAdapter<DiaHorario> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+        /**La creacion del objeto View y asignarle el inflate, la intension es traer
+         * al contexto todos los elementos del fragment*/
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View item = inflater.inflate(R.layout.list_template, null);

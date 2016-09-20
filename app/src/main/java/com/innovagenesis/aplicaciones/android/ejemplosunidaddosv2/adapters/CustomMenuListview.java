@@ -27,17 +27,23 @@ public class CustomMenuListview extends ArrayAdapter<CapturaDatos>{
     public View getView(int position, View convertView, ViewGroup parent) {
 
 
-        /** Instancia el layout y llena el listView*/
+        /** Instancia el layout y llena el listView la intencion de la creacion de este template
+         *  es personalizar el objeto antes de cargarlo en su elemento respectivo
+         **/
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
         View view = inflater.inflate(R.layout.template_list_view,null);
 
+        /**Enlazando TextsViews de captura de datos*/
         TextView menuTitleListview = (TextView)view.findViewById(R.id.titleMenuListview);
         TextView descrMenuListview = (TextView)view.findViewById(R.id.descrMenuListview);
 
-        menuTitleListview.setText(getItem(position).titleMenuListview);
-        descrMenuListview.setText(getItem(position).descrMenuListview);
+       /**Asignacion de datos y llenado*/
+        menuTitleListview.setText(getItem(position).getDatosMenuListview());
+        descrMenuListview.setText(getItem(position).getDescrMenuListview());
+
+
 
         return view;
     }

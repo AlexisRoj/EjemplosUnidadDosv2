@@ -35,10 +35,14 @@ public class SimpleSpinner extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_simple_spinner, container, false);
 
+        /** Se llena el adaptador con los datos necesarios, se utiliza un template del sistema
+         *  para el llenado del mismo */
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource
                 (getActivity(), R.array.horario_de_clases, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        /**Enlaza el spinner y le asigna el adaptador*/
         spinner = (Spinner)view.findViewById(R.id.simple_spinner);
         spinner.setAdapter(adapter);
 

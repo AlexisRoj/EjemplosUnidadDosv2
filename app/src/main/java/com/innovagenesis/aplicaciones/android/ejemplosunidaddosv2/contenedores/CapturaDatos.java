@@ -6,7 +6,7 @@ public class CapturaDatos {
     public String titleMenuListview;
     public String descrMenuListview;
 
-    /** Realiza la caputa de datos de llenado**/
+    /** Realiza la caputa de datos de llenado, para el menu del home**/
 
     public CapturaDatos(String datosMenuListview, String descrMenuListview) {
         this.titleMenuListview = datosMenuListview;
