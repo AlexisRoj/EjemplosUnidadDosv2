@@ -34,6 +34,7 @@ public class MenuHome extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu_home, container, false);
 
+        /** Objetos que llenan el menu**/
         final String[] titleMenu = getActivity().getResources().getStringArray(R.array.menuTitleString);
         String[] descrMenu = getActivity().getResources().getStringArray(R.array.descrMenuString);
 
@@ -41,7 +42,7 @@ public class MenuHome extends Fragment {
         ArrayList<CapturaDatos> lista = new ArrayList<>();
 
         for (int i = 0; i < titleMenu.length; i++) {
-
+            /** llenado del listview del menu*/
             lista.add(new CapturaDatos(titleMenu[i], descrMenu[i]));
         }
 

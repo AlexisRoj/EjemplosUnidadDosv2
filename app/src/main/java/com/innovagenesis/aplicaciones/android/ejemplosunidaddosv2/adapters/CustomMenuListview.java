@@ -19,7 +19,7 @@ public class CustomMenuListview extends ArrayAdapter<CapturaDatos>{
 
     public CustomMenuListview(Context context, List<CapturaDatos> objects) {
         /** Resive la lista y el contexto de donde se llama **/
-        super(context, R.layout.template_list_view, objects);
+        super(context, R.layout.template_listview_home, objects);
 
     }
 
@@ -33,7 +33,7 @@ public class CustomMenuListview extends ArrayAdapter<CapturaDatos>{
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
-        View view = inflater.inflate(R.layout.template_list_view,null);
+        View view = inflater.inflate(R.layout.template_listview_home,null);
 
         /**Enlazando TextsViews de captura de datos*/
         TextView menuTitleListview = (TextView)view.findViewById(R.id.titleMenuListview);
