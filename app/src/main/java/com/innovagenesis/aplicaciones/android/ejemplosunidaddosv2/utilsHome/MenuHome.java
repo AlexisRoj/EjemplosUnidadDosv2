@@ -1,4 +1,4 @@
-package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2;
+package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome;
 
 
 import android.os.Bundle;
@@ -7,12 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomListView;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleSpinner;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.MiscelaneosFragment;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.R;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleListView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.adapters.CustomMenuListview;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.contenedores.CapturaDatos;
 
@@ -71,6 +72,12 @@ public class MenuHome extends Fragment {
                    case 1: {
                        /** Ejecuta el ejemplo de un ListView custom **/
                        fragment = new CustomListView();
+                       cambiar.remplazarFragment(fragment,getActivity()).commit();
+                       break;
+                   }
+                   case 2: {
+                       /** Ejecuta el ejemplo de un ListView custom **/
+                       fragment = new SimpleSpinner();
                        cambiar.remplazarFragment(fragment,getActivity()).commit();
                        break;
                    }

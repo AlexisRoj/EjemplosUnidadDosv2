@@ -1,4 +1,4 @@
-package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2;
+package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments;
 
 
 import android.os.Bundle;
