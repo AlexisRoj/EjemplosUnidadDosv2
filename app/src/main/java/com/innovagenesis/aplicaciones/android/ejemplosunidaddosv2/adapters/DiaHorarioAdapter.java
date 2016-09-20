@@ -40,4 +40,18 @@ public class DiaHorarioAdapter extends ArrayAdapter<DiaHorario> {
 
         return item;
     }
+    /** Funciona exclusivamente con el custom Spinner, es que activa la opcion del drop**/
+    @Override
+    public View getDropDownView(int position, View convertView, ViewGroup parent) {
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View elemento = inflater.inflate(R.layout.list_template, null);
+
+        TextView titulo = (TextView) elemento.findViewById(R.id.titulo);
+        TextView subtitulo = (TextView) elemento.findViewById(R.id.subtitulo);
+
+        titulo.setText(getItem(position).getAsignatura());
+        subtitulo.setText(getItem(position).getDia());
+
+        return elemento;
+    }
 }

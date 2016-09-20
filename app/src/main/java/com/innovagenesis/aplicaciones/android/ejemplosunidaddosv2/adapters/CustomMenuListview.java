@@ -43,8 +43,6 @@ public class CustomMenuListview extends ArrayAdapter<CapturaDatos>{
         menuTitleListview.setText(getItem(position).getDatosMenuListview());
         descrMenuListview.setText(getItem(position).getDescrMenuListview());
 
-
-
         return view;
     }
 }

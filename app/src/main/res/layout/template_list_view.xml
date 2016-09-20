@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
+        android:textColor="#0D47A1"
         android:id="@+id/titleMenuListview" />
 
     <TextView

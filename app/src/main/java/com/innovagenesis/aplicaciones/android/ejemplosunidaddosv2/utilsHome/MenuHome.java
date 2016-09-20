@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomSpinner;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomListView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleSpinner;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.MiscelaneosFragment;
@@ -33,20 +34,20 @@ public class MenuHome extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu_home, container, false);
 
-        final String [] titleMenu = getActivity().getResources().getStringArray(R.array.menuTitleString);
-        String [] descrMenu = getActivity().getResources().getStringArray(R.array.descrMenuString);
+        final String[] titleMenu = getActivity().getResources().getStringArray(R.array.menuTitleString);
+        String[] descrMenu = getActivity().getResources().getStringArray(R.array.descrMenuString);
 
 
-        ArrayList<CapturaDatos> lista = new ArrayList<> ();
+        ArrayList<CapturaDatos> lista = new ArrayList<>();
 
-        for (int i = 0; i < titleMenu.length; i ++){
+        for (int i = 0; i < titleMenu.length; i++) {
 
             lista.add(new CapturaDatos(titleMenu[i], descrMenu[i]));
         }
 
-        CustomMenuListview adapter = new CustomMenuListview(getActivity(),lista);
+        CustomMenuListview adapter = new CustomMenuListview(getActivity(), lista);
 
-        ListView listView = (ListView)view.findViewById(R.id.menu_listView);
+        ListView listView = (ListView) view.findViewById(R.id.menu_listView);
         listView.setAdapter(adapter);
 
         /** Se implementa el onItemClick para ejecutar los diferentes Fragments**/
@@ -60,27 +61,33 @@ public class MenuHome extends Fragment {
 
                 /** Lanza el activity de acuerdo al selecionado **/
 
-               switch (position){
+                switch (position) {
 
-                   case 0:{
-                       /** Ejecuta el ejemplo de un ListView simple **/
-                       fragment = new SimpleListView();
-                       cambiar.remplazarFragment(fragment,getActivity()).commit();
-                       break;
-                   }
-                   case 1: {
-                       /** Ejecuta el ejemplo de un ListView custom **/
-                       fragment = new CustomListView();
-                       cambiar.remplazarFragment(fragment,getActivity()).commit();
-                       break;
-                   }
-                   case 2: {
-                       /** Ejecuta el ejemplo de un ListView custom **/
-                       fragment = new SimpleSpinner();
-                       cambiar.remplazarFragment(fragment,getActivity()).commit();
-                       break;
-                   }
-               }
+                    case 0: {
+                        /** Ejecuta el ejemplo de un ListView simple **/
+                        fragment = new SimpleListView();
+                        cambiar.remplazarFragment(fragment, getActivity()).commit();
+                        break;
+                    }
+                    case 1: {
+                        /** Ejecuta el ejemplo de un ListView custom **/
+                        fragment = new CustomListView();
+                        cambiar.remplazarFragment(fragment, getActivity()).commit();
+                        break;
+                    }
+                    case 2: {
+                        /** Ejecuta el ejemplo de un Spinner simple **/
+                        fragment = new SimpleSpinner();
+                        cambiar.remplazarFragment(fragment, getActivity()).commit();
+                        break;
+                    }
+                    case 3: {
+                        /** Ejecuta el ejemplo de un Spinner custom **/
+                        fragment = new CustomSpinner();
+                        cambiar.remplazarFragment(fragment, getActivity()).commit();
+                        break;
+                    }
+                }
             }
         });
         return view;
