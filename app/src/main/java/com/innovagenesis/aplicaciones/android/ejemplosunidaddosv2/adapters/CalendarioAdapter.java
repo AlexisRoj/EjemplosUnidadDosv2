@@ -48,7 +48,7 @@ public class CalendarioAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = convertView;
 
-        if (convertView != null) {
+        if (convertView == null) {
             view = inflater.inflate(R.layout.grid_template, null);
         }
 
