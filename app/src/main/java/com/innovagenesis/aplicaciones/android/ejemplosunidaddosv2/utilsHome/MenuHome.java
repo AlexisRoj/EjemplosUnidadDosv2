@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomGrid;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomSpinner;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomListView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleSpinner;
@@ -85,6 +86,13 @@ public class MenuHome extends Fragment {
                     case 3: {
                         /** Ejecuta el ejemplo de un Spinner custom **/
                         fragment = new CustomSpinner();
+                        cambiar.remplazarFragment(fragment, getActivity()).commit();
+                        break;
+                    }
+
+                    case 4: {
+                        /** Ejecuta el ejemplo de un Grid custom **/
+                        fragment = new CustomGrid();
                         cambiar.remplazarFragment(fragment, getActivity()).commit();
                         break;
                     }

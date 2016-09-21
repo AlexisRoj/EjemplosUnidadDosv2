@@ -10,6 +10,7 @@
         <item>Custom ListView</item>
         <item>Simple Spinner</item>
         <item>Custom Spinner</item>
+        <item>Custom GridView</item>
 
     </string-array>
 
@@ -19,6 +20,7 @@
         <item>Ej. custom Listview</item>
         <item>Ej. simple Spinner</item>
         <item>Ej. custom Spinner</item>
+        <item>Ej. custom Gridview</item>
 
     </string-array>
 
