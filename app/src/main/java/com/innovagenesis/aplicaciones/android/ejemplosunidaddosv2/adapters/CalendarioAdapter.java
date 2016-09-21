@@ -14,7 +14,7 @@ import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.contenedores.C
 
 import java.util.ArrayList;
 
-public class CalendarioAdapter extends BaseAdapter{
+public class CalendarioAdapter extends BaseAdapter {
 
     private ArrayList<Calendario> elementos;
     private Context context;
@@ -40,6 +40,7 @@ public class CalendarioAdapter extends BaseAdapter{
     }
 
     @Override
+
     public View getView(int position, View convertView, ViewGroup parent) {
 
         /** Como no se hereda de la clase View se hace atravez del parent*/
@@ -47,8 +48,8 @@ public class CalendarioAdapter extends BaseAdapter{
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = convertView;
 
-        if (convertView != null){
-            view = inflater.inflate(R.layout.grid_template,null);
+        if (convertView != null) {
+            view = inflater.inflate(R.layout.grid_template, null);
         }
 
         /** Adjunta elementos desde el template */

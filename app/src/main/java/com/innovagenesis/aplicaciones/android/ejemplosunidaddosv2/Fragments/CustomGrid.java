@@ -28,27 +28,24 @@ public class CustomGrid extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_grid, container, false);
 
-        CalendarioAdapter adapter = new CalendarioAdapter(getContext(),listar());
+        CalendarioAdapter adapter = new CalendarioAdapter(getContext(), listar());
 
-        gridView = (GridView)view.findViewById(R.id.grid);
+        gridView = (GridView) view.findViewById(R.id.grid);
         gridView.setAdapter(adapter);
 
         return view;
     }
 
     private ArrayList<Calendario> listar() {
-
-        String[] meses = getContext().getResources().getStringArray(R.array.meses);
-        TypedArray imagenes = getContext().getResources().obtainTypedArray(R.array.zodiaco);
+        String[] meses = getResources().getStringArray(R.array.meses);
+        TypedArray imagenes = getResources().obtainTypedArray(R.array.zodiaco);
 
         ArrayList<Calendario> lista = new ArrayList<>();
 
-        for (int i = 0; i < meses.length; i++){
-            /** En la calse calendario se envia como un getResourceId, se envia la pos
-             * y un valor por default*/
-            listar().add(new Calendario(imagenes.getResourceId(i,0),meses[i]));
+        for (int i = 0; i < meses.length; i++) {
+            lista.add(new Calendario(imagenes.getResourceId(i, 0), meses[i]));
         }
-        return  lista;
+        return lista;
     }
 
 }
