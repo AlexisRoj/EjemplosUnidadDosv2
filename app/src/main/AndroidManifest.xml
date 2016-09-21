@@ -41,6 +41,8 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/text_widget_class_info" />
         </receiver>
+
+        <activity android:name=".SegundaActivity"></activity>
     </application>
 
 </manifest>

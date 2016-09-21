@@ -1,6 +1,7 @@
 package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,9 +14,11 @@ import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.Cust
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomSpinner;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomListView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleSpinner;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.MainActivity;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.MiscelaneosFragment;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.R;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleListView;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.SegundaActivity;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.adapters.CustomMenuListview;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.contenedores.CapturaDatos;
 
@@ -96,6 +99,15 @@ public class MenuHome extends Fragment {
                         cambiar.remplazarFragment(fragment, getActivity()).commit();
                         break;
                     }
+
+                    case 5: {
+                        /** Ejecuta el ejemplo de un Lanzar una segunda activity **/
+                        Intent intent = new Intent(getActivity(),SegundaActivity.class);
+                        startActivity(intent);
+
+                        break;
+                    }
+
                 }
             }
         });

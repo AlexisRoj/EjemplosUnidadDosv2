@@ -13,6 +13,7 @@
         <item>Simple Spinner</item>
         <item>Custom Spinner</item>
         <item>Custom GridView</item>
+        <item>Ejecutar Activity</item>
 
     </string-array>
 
@@ -22,7 +23,8 @@
         <item>Ej. custom Listview</item>
         <item>Ej. simple Spinner</item>
         <item>Ej. custom Spinner</item>
-        <item>Ej. custom Gridview</item>
+        <item>Ej. Custom Grid</item>
+        <item>Ej. ejecuta una activity</item>
 
     </string-array>
 
@@ -79,6 +81,7 @@
     <string name="appwidget_text">Alexis Rojas Hidalgo</string>
     <string name="appwidget_text2">Android Developer</string>
     <string name="add_widget">Add widget</string>
+    <string name="text2">Segunda Actividad</string>
 
 
 </resources>
