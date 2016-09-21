@@ -2,6 +2,7 @@
     <string name="app_name">Ejemplos Unidad Dos v2</string>
     <string name="action_settings">Settings</string>
     <string name="label">Widget con Imagen</string>
+    <string name="label2">Widget con Texto</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -75,6 +76,9 @@
         <item>@drawable/scorpio</item>
         <item>@drawable/sagitario</item>
     </array>
+    <string name="appwidget_text">Alexis Rojas Hidalgo</string>
+    <string name="appwidget_text2">Android Developer</string>
+    <string name="add_widget">Add widget</string>
 
 
 </resources>

@@ -29,10 +29,18 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/imagen_widget_info" />
-
         </receiver>
+        <receiver
+            android:name="layout.TextWidgetClass"
+            android:label="@string/label2">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
 
-
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/text_widget_class_info" />
+        </receiver>
     </application>
 
 </manifest>
