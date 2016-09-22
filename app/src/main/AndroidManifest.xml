@@ -42,7 +42,8 @@
                 android:resource="@xml/text_widget_class_info" />
         </receiver>
 
-        <activity android:name=".SegundaActivity"></activity>
+        <activity android:name=".SegundaActivity" />
+        <activity android:name=".Login"></activity>
     </application>
 
 </manifest>
