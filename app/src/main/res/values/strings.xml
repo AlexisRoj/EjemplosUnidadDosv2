@@ -87,6 +87,7 @@
     <string name="add_widget">Add widget</string>
     <string name="text2">Segunda Actividad</string>
     <string name="variableString">Este es el texto que se envia</string>
+    <string name="mensaje_toast">Este es un mensaje de corta duracion</string>
 
 
 </resources>

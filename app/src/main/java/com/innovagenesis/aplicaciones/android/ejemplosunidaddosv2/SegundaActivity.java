@@ -4,6 +4,7 @@ import android.app.NotificationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SegundaActivity extends AppCompatActivity {
 
@@ -12,6 +13,8 @@ public class SegundaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda);
 
+        /**Este bundle atrapa los datos que se envian desde el boton 5
+         * y los asigna a las dos variables de abajo*/
         Bundle datos = this.getIntent().getExtras();
 
         String frase = datos.getString("variableString");
@@ -31,5 +34,10 @@ public class SegundaActivity extends AppCompatActivity {
         /**Elimina la notificacion de la barra*/
         NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         nm.cancel(getIntent().getExtras().getInt("notificacion"));
+
+        /**Continuando el ejemplo de la notificion se implementa un Toast*/
+
+        Toast.makeText(this, R.string.mensaje_toast,Toast.LENGTH_LONG).show();
+
     }
 }

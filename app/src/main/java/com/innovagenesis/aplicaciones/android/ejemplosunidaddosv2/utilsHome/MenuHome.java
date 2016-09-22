@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NotificationCompat;
 import android.view.LayoutInflater;
@@ -74,10 +75,6 @@ public class MenuHome extends Fragment {
                 Fragment fragment;
                 Intent intent;
 
-
-                String variableString = getString(R.string.variableString);
-                int variableNumerica = 10;
-
                 /** Lanza el activity de acuerdo al selecionado **/
 
                 switch (position) {
@@ -106,52 +103,43 @@ public class MenuHome extends Fragment {
                         cambiar.remplazarFragment(fragment, getActivity()).commit();
                         break;
                     }
-
                     case 4: {
                         /** Ejecuta el ejemplo de un Grid custom **/
                         fragment = new CustomGrid();
                         cambiar.remplazarFragment(fragment, getActivity()).commit();
                         break;
                     }
-
                     case 5: {
                         /** Ejecuta el ejemplo de un Lanzar una segunda activity  y pasa datos**/
-                        intent = new Intent(getContext(),SegundaActivity.class);
-                        intent.putExtra("variableString",variableString);
-                        intent.putExtra("variableInt",variableNumerica);
 
-                        /** Se crea la notificacion cuando se carga el segundo activity*/
-                        intent.putExtra("notificacion",ID);
-                        PendingIntent pendingIntent = PendingIntent.getActivity(getContext(),0,intent,0);
-                        NotificationManager nm = (NotificationManager)getContext().getSystemService(Context.NOTIFICATION_SERVICE);
-                        Uri sonido= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-                        Notification n = new NotificationCompat.Builder(getContext())
-                                .setContentIntent(pendingIntent)
-                                .setTicker("Click aqui")
-                                .setContentTitle("Notificacion nueva")
-                                .setContentText("Contenido de la notificacion")
-                                .setSubText("Subtexto")
-                                .setSmallIcon(R.mipmap.ic_launcher)
-                                .addAction(R.mipmap.ic_launcher,"Click aqui",pendingIntent)
-                                .addAction(android.R.drawable.ic_menu_share,"Compartir",pendingIntent)
-                                .setVibrate(new long[]{50,500,100,50})
-                                .setPriority(Notification.PRIORITY_MAX)
-                                .setSound(sonido)
-                                .setLights(Color.BLUE,1,0)
-                                .build();
-                        nm.notify(ID,n);
+                        Snackbar snackbar = Snackbar.make(view, "Notificacion", Snackbar.LENGTH_SHORT)
+                                .setAction("Precionar para ejecutar Activity", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
 
-                      /*  startActivity(intent);*/
+                                        /** Estas dos variables corresponden a los dos datos enviados
+                                         * al segundo activity mediante el Bundle**/
+                                        String variableString = getString(R.string.variableString);
+                                        int variableNumerica = 10;
+
+                                        Intent intent2 = new Intent(getContext(), SegundaActivity.class);
+                                        ejecutarActividad(intent2, variableString, variableNumerica);
+                                    }
+                                });
+                        snackbar.setActionTextColor(Color.GREEN);
+                        View snackView = snackbar.getView();
+                        snackView.setBackgroundColor(Color.BLUE);
+                        snackbar.show();
+
+                      /*  startActivity(intent); se utiliza cuando se quiere llamar una actividad*/
                         break;
                     }
-
                     case 6: {
                         /** Ejecuta un intent hacia una url **/
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://wwww.google.com"));
                         startActivity(intent);
                         break;
                     }
-
                     case 7: {
                         /** Ejecuta un intent llamada **/
                         intent = new Intent(Intent.ACTION_DIAL);
@@ -161,7 +149,49 @@ public class MenuHome extends Fragment {
 
                 }
             }
+
+            private void ejecutarActividad(Intent intent, String variableString, int variableNumerica) {
+
+                /***************************************************************************
+                 *                                                                         *
+                 *                    EJECUTA ACTIVITY Y INICIA NOTIFICACION               *
+                 *                                                                         *
+                 ****************************************************************************/
+
+                /**Ejecuta la actividad y crea una notificacion, se separa para mantener orden
+                 *  y sea mas simple crear mensajes y validaciones                             */
+
+                intent.putExtra("variableString", variableString);
+                intent.putExtra("variableInt", variableNumerica);
+
+                /** Se crea la notificacion cuando se carga el segundo activity*/
+                intent.putExtra("notificacion", ID);
+                PendingIntent pendingIntent = PendingIntent.getActivity(getContext(), 0, intent, 0);
+                NotificationManager nm = (NotificationManager) getContext()
+                        .getSystemService(Context.NOTIFICATION_SERVICE);
+                Uri sonido = RingtoneManager
+                        .getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                Notification n = new NotificationCompat.Builder(getContext())
+                        .setContentIntent(pendingIntent)
+                        .setTicker("Click aqui")
+                        .setContentTitle("Notificacion nueva")
+                        .setContentText("Contenido de la notificacion")
+                        .setSubText("Subtexto")
+                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .addAction(R.mipmap.ic_launcher, "Click aqui", pendingIntent)
+                        .addAction(android.R.drawable.ic_menu_share, "Compartir", pendingIntent)
+                        .setVibrate(new long[]{50, 500, 100, 50})
+                        .setPriority(Notification.PRIORITY_MAX)
+                        .setSound(sonido)
+                        .setLights(Color.BLUE, 1, 0)
+                        .build();
+                nm.notify(ID, n);
+
+            }
+
         });
         return view;
     }
+
+
 }
