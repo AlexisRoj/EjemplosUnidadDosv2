@@ -66,6 +66,9 @@ public class MenuHome extends Fragment {
                 Fragment fragment;
                 Intent intent;
 
+                String variableString = getString(R.string.variableString);
+                int variableNumerica = 10;
+
                 /** Lanza el activity de acuerdo al selecionado **/
 
                 switch (position) {
@@ -103,15 +106,24 @@ public class MenuHome extends Fragment {
                     }
 
                     case 5: {
-                        /** Ejecuta el ejemplo de un Lanzar una segunda activity **/
+                        /** Ejecuta el ejemplo de un Lanzar una segunda activity  y pasa datos**/
                         intent = new Intent(getActivity(),SegundaActivity.class);
+                        intent.putExtra("variableString",variableString);
+                        intent.putExtra("variableInt",variableNumerica);
                         startActivity(intent);
                         break;
                     }
 
                     case 6: {
                         /** Ejecuta un intent hacia una url **/
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("wwww.google.com"));
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://wwww.google.com"));
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 7: {
+                        /** Ejecuta un intent llamada **/
+                        intent = new Intent(Intent.ACTION_DIAL);
                         startActivity(intent);
                         break;
                     }

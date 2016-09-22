@@ -13,8 +13,9 @@
         <item>Simple Spinner</item>
         <item>Custom Spinner</item>
         <item>Custom GridView</item>
-        <item>Ejecutar Activity</item>
+        <item>Ejecutar Activity y comunicacion</item>
         <item>Intent Implicito</item>
+        <item>Intent Llamada</item>
 
     </string-array>
 
@@ -25,8 +26,9 @@
         <item>Ej. simple Spinner</item>
         <item>Ej. custom Spinner</item>
         <item>Ej. Custom Grid</item>
-        <item>Ej. ejecuta una activity</item>
+        <item>Ej. ejecuta una activity y le envia datos</item>
         <item>Ej. ejecuta un itent a URL</item>
+        <item>Ej. ejecuta el Dial del telefono</item>
 
     </string-array>
 
@@ -84,6 +86,7 @@
     <string name="appwidget_text2">Android Developer</string>
     <string name="add_widget">Add widget</string>
     <string name="text2">Segunda Actividad</string>
+    <string name="variableString">Este es el texto que se envia</string>
 
 
 </resources>
