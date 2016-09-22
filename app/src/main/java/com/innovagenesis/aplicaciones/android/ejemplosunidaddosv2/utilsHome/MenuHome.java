@@ -1,6 +1,7 @@
 package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome;
 
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import java.util.ArrayList;
 
 public class MenuHome extends Fragment {
 
+    int ID = 1;
 
     public MenuHome() {
         // Required empty public constructor
@@ -65,6 +67,7 @@ public class MenuHome extends Fragment {
                 MiscelaneosFragment cambiar = new MiscelaneosFragment();
                 Fragment fragment;
                 Intent intent;
+
 
                 String variableString = getString(R.string.variableString);
                 int variableNumerica = 10;
@@ -107,9 +110,17 @@ public class MenuHome extends Fragment {
 
                     case 5: {
                         /** Ejecuta el ejemplo de un Lanzar una segunda activity  y pasa datos**/
-                        intent = new Intent(getActivity(),SegundaActivity.class);
+                        intent = new Intent(getContext(),SegundaActivity.class);
                         intent.putExtra("variableString",variableString);
                         intent.putExtra("variableInt",variableNumerica);
+
+                        /** Se crea la notificacion cuando se carga el segundo activity*/
+                        intent.putExtra("notificacion",ID);
+                        PendingIntent pendingIntent = PendingIntent.getActivities(getContext(),0,intent,0);
+
+
+
+
                         startActivity(intent);
                         break;
                     }
