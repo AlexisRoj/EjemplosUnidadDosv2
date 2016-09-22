@@ -1,11 +1,17 @@
 package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome;
 
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,8 +48,8 @@ public class MenuHome extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu_home, container, false);
 
         /** Objetos que llenan el menu**/
-        final String[] titleMenu = getActivity().getResources().getStringArray(R.array.menuTitleString);
-        String[] descrMenu = getActivity().getResources().getStringArray(R.array.descrMenuString);
+        final String[] titleMenu = getContext().getResources().getStringArray(R.array.menuTitleString);
+        String[] descrMenu = getContext().getResources().getStringArray(R.array.descrMenuString);
 
 
         ArrayList<CapturaDatos> lista = new ArrayList<>();
@@ -116,12 +122,26 @@ public class MenuHome extends Fragment {
 
                         /** Se crea la notificacion cuando se carga el segundo activity*/
                         intent.putExtra("notificacion",ID);
-                        PendingIntent pendingIntent = PendingIntent.getActivities(getContext(),0,intent,0);
+                        PendingIntent pendingIntent = PendingIntent.getActivity(getContext(),0,intent,0);
+                        NotificationManager nm = (NotificationManager)getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+                        Uri sonido= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                        Notification n = new NotificationCompat.Builder(getContext())
+                                .setContentIntent(pendingIntent)
+                                .setTicker("Click aqui")
+                                .setContentTitle("Notificacion nueva")
+                                .setContentText("Contenido de la notificacion")
+                                .setSubText("Subtexto")
+                                .setSmallIcon(R.mipmap.ic_launcher)
+                                .addAction(R.mipmap.ic_launcher,"Click aqui",pendingIntent)
+                                .addAction(android.R.drawable.ic_menu_share,"Compartir",pendingIntent)
+                                .setVibrate(new long[]{50,500,100,50})
+                                .setPriority(Notification.PRIORITY_MAX)
+                                .setSound(sonido)
+                                .setLights(Color.BLUE,1,0)
+                                .build();
+                        nm.notify(ID,n);
 
-
-
-
-                        startActivity(intent);
+                      /*  startActivity(intent);*/
                         break;
                     }
 

@@ -1,5 +1,6 @@
 package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2;
 
+import android.app.NotificationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -26,5 +27,9 @@ public class SegundaActivity extends AppCompatActivity {
 
         assert textView2 != null;
         textView2.setText(String.valueOf(numero)); // Se envia como un texto
+
+        /**Elimina la notificacion de la barra*/
+        NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        nm.cancel(getIntent().getExtras().getInt("notificacion"));
     }
 }
