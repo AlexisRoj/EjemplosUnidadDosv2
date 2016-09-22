@@ -14,6 +14,7 @@
         <item>Custom Spinner</item>
         <item>Custom GridView</item>
         <item>Ejecutar Activity</item>
+        <item>Intent Implicito</item>
 
     </string-array>
 
@@ -25,6 +26,7 @@
         <item>Ej. custom Spinner</item>
         <item>Ej. Custom Grid</item>
         <item>Ej. ejecuta una activity</item>
+        <item>Ej. ejecuta un itent a URL</item>
 
     </string-array>
 

@@ -2,6 +2,7 @@ package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -63,6 +64,7 @@ public class MenuHome extends Fragment {
 
                 MiscelaneosFragment cambiar = new MiscelaneosFragment();
                 Fragment fragment;
+                Intent intent;
 
                 /** Lanza el activity de acuerdo al selecionado **/
 
@@ -102,9 +104,15 @@ public class MenuHome extends Fragment {
 
                     case 5: {
                         /** Ejecuta el ejemplo de un Lanzar una segunda activity **/
-                        Intent intent = new Intent(getActivity(),SegundaActivity.class);
+                        intent = new Intent(getActivity(),SegundaActivity.class);
                         startActivity(intent);
+                        break;
+                    }
 
+                    case 6: {
+                        /** Ejecuta un intent hacia una url **/
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("wwww.google.com"));
+                        startActivity(intent);
                         break;
                     }
 
