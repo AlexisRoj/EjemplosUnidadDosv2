@@ -90,6 +90,7 @@
     <string name="mensaje_toast">Este es un mensaje de corta duracion</string>
     <string name="hitEmail">User name or Email address:</string>
     <string name="hintPass">Password:</string>
+    <string name="lose_pass">Olvido su contraseña, clic aquí</string>
 
 
 </resources>
