@@ -82,6 +82,33 @@
         <item>@drawable/scorpio</item>
         <item>@drawable/sagitario</item>
     </array>
+
+    <!-- Imagenes menu-->
+    <array name="imagenTitulo">
+        <item>@drawable/menu1</item>
+        <item>@drawable/menu1</item>
+        <item>@drawable/menu1</item>
+        <item>@drawable/menu1</item>
+        <item>@drawable/menu1</item>
+        <item>@drawable/menu1</item>
+        <item>@drawable/menu1</item>
+        <item>@drawable/menu1</item>
+
+    </array>
+
+    <!-- Imagenes menu-->
+    <string-array name="numeroImagen">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+
     <string name="appwidget_text">Alexis Rojas Hidalgo</string>
     <string name="appwidget_text2">Android Developer</string>
     <string name="add_widget">Add widget</string>

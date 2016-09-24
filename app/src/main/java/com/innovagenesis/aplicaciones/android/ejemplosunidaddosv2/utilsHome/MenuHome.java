@@ -87,7 +87,7 @@ public class MenuHome extends Fragment {
                     }
                     case 1: {
                         /** Ejecuta el ejemplo de un ListView custom **/
-                        fragment = new CustomListView();
+                        fragment = new MenuHomeGrid();//CustomListView();
                         cambiar.remplazarFragment(fragment, getActivity()).commit();
                         break;
                     }
