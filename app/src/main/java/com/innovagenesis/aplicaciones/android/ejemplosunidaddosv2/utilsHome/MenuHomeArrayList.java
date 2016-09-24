@@ -33,11 +33,11 @@ import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.contenedores.C
 
 import java.util.ArrayList;
 
-public class MenuHome extends Fragment {
+public class MenuHomeArrayList extends Fragment {
 
     int ID = 1;
 
-    public MenuHome() {
+    public MenuHomeArrayList() {
         // Required empty public constructor
     }
 

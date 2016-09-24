@@ -1,6 +1,5 @@
 package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -11,11 +10,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome.MenuHome;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome.MenuHomeArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Fragment fragment = new MenuHome();
+    Fragment fragment = new MenuHomeArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

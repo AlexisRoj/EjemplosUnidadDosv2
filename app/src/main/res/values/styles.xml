@@ -8,13 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!--Tema segunda activity-->
-    <style name="AppMain" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!--&lt;!&ndash;Tema segunda activity&ndash;&gt;
+    <style name="AppColorMenu">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
         <item name="colorMenu">@color/colorMenu</item>
         <item name="colorComplemento">@color/colorComplemento</item>
 
-    </style>
+    </style>-->
 
 
 
