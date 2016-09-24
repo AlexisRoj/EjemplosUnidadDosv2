@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Template para llenar el GridView-->
 
     <ImageView
         android:id="@+id/imagenMenu"
         android:layout_width="230dp"
         android:layout_height="90dp"
-        app:srcCompat="@drawable/menu1" />
+        app:srcCompat="@drawable/menu1"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textoNumeroMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="6dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
         android:text="1"
-        android:paddingLeft="13dp"
-        android:textSize="60sp" />
+        android:textSize="60sp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
 
     <LinearLayout
         android:layout_width="230dp"
         android:layout_height="90dp"
-        android:paddingTop="10dp"
+        android:orientation="vertical"
         android:paddingLeft="60dp"
-        android:orientation="vertical">
+        android:paddingTop="10dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
 
 
         <TextView
@@ -42,11 +47,11 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:text="New Text"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

@@ -5,8 +5,10 @@
     <color name="colorAccent2">#FF4081</color>
 
     <!--My theme-->
-    <color name="colorPrimary">#8BC34A</color>
-    <color name="colorPrimaryDark">#8BC34A</color>
+    <color name="colorPrimary3">#8BC34A</color>
+    <color name="colorPrimary">#558B2F</color>
+    <color name="colorPrimaryDark3">#8BC34A</color>
+    <color name="colorPrimaryDark">#558B2F</color>
     <color name="colorAccent">#558B2F</color>
 
 

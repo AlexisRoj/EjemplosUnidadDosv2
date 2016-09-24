@@ -118,6 +118,8 @@
     <string name="hitEmail">User name or Email address:</string>
     <string name="hintPass">Password:</string>
     <string name="lose_pass">Olvido su contraseña, clic aquí</string>
+    <string name="btnLogin">Iniciar Sección</string>
+    <string name="toastLogin">Se salvaron si pueden ingresar</string>
 
 
 </resources>

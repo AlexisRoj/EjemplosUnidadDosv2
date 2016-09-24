@@ -11,10 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome.MenuHomeArrayList;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome.MenuHomeGrid;
 
 public class MainActivity extends AppCompatActivity {
 
-    Fragment fragment = new MenuHomeArrayList();
+    //Fragment fragment = new MenuHomeArrayList(); Administra quien ejecuta el menu principal
+
+    Fragment fragment = new MenuHomeGrid();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

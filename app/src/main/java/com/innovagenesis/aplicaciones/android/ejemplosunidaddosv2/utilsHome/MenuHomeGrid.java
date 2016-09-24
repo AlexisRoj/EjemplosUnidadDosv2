@@ -1,5 +1,6 @@
 package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome;
 
+/** Esta es la clase encargada de aministrar el menuGrid y cada uno de sus botones*/
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -20,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomGrid;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomListView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomSpinner;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleListView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleSpinner;
@@ -72,7 +74,7 @@ public class MenuHomeGrid extends Fragment {
                     }
                     case 1: {
                         /** Ejecuta el ejemplo de un ListView custom **/
-                        fragment = new MenuHomeGrid();//CustomListView();
+                        fragment = new CustomListView();
                         cambiar.remplazarFragment(fragment, getActivity()).commit();
                         break;
                     }
