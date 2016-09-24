@@ -117,13 +117,13 @@ public class MenuHomeGrid extends Fragment {
                         View snackView = snackbar.getView();
                         snackView.setBackgroundColor(Color.BLUE);
                         snackbar.show();
-
                       /*  startActivity(intent); se utiliza cuando se quiere llamar una actividad*/
                         break;
                     }
                     case 6: {
                         /** Ejecuta un intent hacia una url **/
-                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://wwww.google.com"));
+                        intent = new Intent(Intent.ACTION_SEARCH);
+                                //.ACTION_VIEW, Uri.parse("http://www.google.com"));
                         startActivity(intent);
                         break;
                     }

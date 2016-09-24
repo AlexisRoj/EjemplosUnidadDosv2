@@ -17,7 +17,7 @@ public class MiscelaneosFragment {
 
         FragmentManager fm = activity.getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.fragment_contenedor,fragment);
+        ft.addToBackStack(null).replace(R.id.fragment_contenedor,fragment);
         return ft;
     }
 

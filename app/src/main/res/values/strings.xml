@@ -86,13 +86,13 @@
     <!-- Imagenes menu-->
     <array name="imagenTitulo">
         <item>@drawable/menu1</item>
+        <item>@drawable/menu2</item>
+        <item>@drawable/menu3</item>
+        <item>@drawable/menu4</item>
+        <item>@drawable/menu5</item>
         <item>@drawable/menu1</item>
-        <item>@drawable/menu1</item>
-        <item>@drawable/menu1</item>
-        <item>@drawable/menu1</item>
-        <item>@drawable/menu1</item>
-        <item>@drawable/menu1</item>
-        <item>@drawable/menu1</item>
+        <item>@drawable/menu2</item>
+        <item>@drawable/menu3</item>
 
     </array>
 
@@ -120,6 +120,8 @@
     <string name="lose_pass">Olvido su contraseña, clic aquí</string>
     <string name="btnLogin">Iniciar Sección</string>
     <string name="toastLogin">Se salvaron si pueden ingresar</string>
+    <string name="btnAddCount">Crear Cuenta</string>
+    <string name="msgWorking">Esta funcion aún no ha sido implementada</string>
 
 
 </resources>

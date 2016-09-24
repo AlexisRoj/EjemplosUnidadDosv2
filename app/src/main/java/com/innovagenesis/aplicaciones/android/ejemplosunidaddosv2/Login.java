@@ -21,12 +21,18 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_login);
 
         Button btnLogin = (Button) findViewById(R.id.btn_login);
+        Button btnLosePass = (Button) findViewById(R.id.btn_addUser);
         checkBox = (CheckBox) findViewById(R.id.lose_pass);
 
         /**Administra las propiedades de los elementos del login*/
         assert btnLogin != null;
         btnLogin.setText(R.string.btnLogin);
+        btnLosePass.setText(R.string.btnAddCount);
+
+
+
         btnLogin.setOnClickListener(this);
+        btnLosePass.setOnClickListener(this);
         checkBox.setOnClickListener(this);
     }
 
@@ -54,8 +60,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 checkBox.setChecked(false);
                 break;
             }
+            case R.id.btn_addUser:{
+                Toast.makeText(getApplicationContext(),
+                        R.string.msgWorking, Toast.LENGTH_SHORT).show();
+                break;
+            }
 
         }
+
+
     }
 
     private void lanzarActivity() {

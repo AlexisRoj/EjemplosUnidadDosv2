@@ -25,7 +25,7 @@
         tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
 
     <LinearLayout
-        android:layout_width="230dp"
+        android:layout_width="260dp"
         android:layout_height="90dp"
         android:orientation="vertical"
         android:paddingLeft="60dp"
