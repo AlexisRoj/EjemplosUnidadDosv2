@@ -6,7 +6,7 @@
     android:widgetCategory="home_screen"
     android:resizeMode="horizontal|vertical"
     android:previewImage="@drawable/image_view_preview">
-○
+
 
 
 </appwidget-provider>

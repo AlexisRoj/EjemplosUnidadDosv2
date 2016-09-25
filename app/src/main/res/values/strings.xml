@@ -96,20 +96,20 @@
 
     </array>
 
-    <!-- Imagenes menu-->
+    <!-- Imagenes menu no se borra para mantener el ejemplo-->
     <string-array name="numeroImagen">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
     </string-array>
 
 
-    <string name="appwidget_text">Alexis Rojas Hidalgo</string>
+    <string name="appwidget_text1">Alexis Rojas Hidalgo</string>
     <string name="appwidget_text2">Android Developer</string>
     <string name="add_widget">Add widget</string>
     <string name="text2">Segunda Actividad</string>
@@ -122,6 +122,7 @@
     <string name="toastLogin">Se salvaron si pueden ingresar</string>
     <string name="btnAddCount">Crear Cuenta</string>
     <string name="msgWorking">Esta funcion aún no ha sido implementada</string>
+    <string name="appwidget_text">EXAMPLE</string>
 
 
 </resources>

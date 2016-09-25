@@ -15,7 +15,7 @@ public class TextWidgetClass extends AppWidgetProvider {
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
-        CharSequence widgetText = context.getString(R.string.appwidget_text);
+        CharSequence widgetText = context.getString(R.string.appwidget_text1);
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.text_widget_class);
         views.setTextViewText(R.id.appwidget_text, widgetText);
