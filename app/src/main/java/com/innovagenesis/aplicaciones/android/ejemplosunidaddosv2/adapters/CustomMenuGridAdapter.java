@@ -52,7 +52,7 @@ public class CustomMenuGridAdapter extends BaseAdapter {
 
         if (convertView == null) {
 
-            view = inflater.inflate(R.layout.grid_template_menu, null);
+            view = inflater.inflate(R.layout.template_grid_menu, null);
         }
         /**Enlaza el template con sus elementos*/
 

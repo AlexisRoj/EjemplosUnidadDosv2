@@ -6,6 +6,8 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <!-- Titulos del Menu principal-->
     <string-array name="menuTitleString">
 
         <item>Simple ListView</item>
@@ -18,7 +20,7 @@
         <item>Intent Llamada</item>
 
     </string-array>
-
+    <!-- Subtitulos del Menu principal-->
     <string-array name="descrMenuString">
 
         <item>Ej. simple Listview</item>
@@ -32,7 +34,7 @@
 
     </string-array>
 
-
+    <!-- Ejemplo horario de clases -->
     <string-array name="horario_de_clases">
         <item>Matematicas</item>
         <item>Ciencias naturales</item>
@@ -42,6 +44,7 @@
         <item>Quimica</item>
     </string-array>
 
+    <!-- Ejemplo horario de clases -->
     <string-array name="dias_semana">
         <item>Lunes</item>
         <item>Martes</item>
@@ -109,6 +112,47 @@
     </string-array>
 
 
+    <!-- Array de imagenes de la Galeria-->
+    <array name="imgGaleria">
+        <item>@drawable/img1</item>
+        <item>@drawable/img2</item>
+        <item>@drawable/img3</item>
+        <item>@drawable/img4</item>
+        <item>@drawable/img5</item>
+        <item>@drawable/img6</item>
+        <item>@drawable/img7</item>
+        <item>@drawable/img8</item>
+        <item>@drawable/img9</item>
+    </array>
+
+    <!-- Descripcion de las imagenes -->
+    <string-array name="descGaleria">
+        <item>Imagen 1</item>
+        <item>Imagen 2</item>
+        <item>Imagen 3</item>
+        <item>Imagen 4</item>
+        <item>Imagen 4</item>
+        <item>Imagen 6</item>
+        <item>Imagen 7</item>
+        <item>Imagen 8</item>
+        <item>Imagen 9</item>
+    </string-array>
+
+    <!-- Descripcion de las imagenes -->
+    <array name="frameGaleria">
+        <item>@drawable/imgframe</item>
+        <item>@drawable/imgframe</item>
+        <item>@drawable/imgframe</item>
+        <item>@drawable/imgframe</item>
+        <item>@drawable/imgframe</item>
+        <item>@drawable/imgframe</item>
+        <item>@drawable/imgframe</item>
+        <item>@drawable/imgframe</item>
+        <item>@drawable/imgframe</item>
+    </array>
+
+
+    <!-- Miscelaneos -->
     <string name="appwidget_text1">Alexis Rojas Hidalgo</string>
     <string name="appwidget_text2">Android Developer</string>
     <string name="add_widget">Add widget</string>
@@ -125,6 +169,7 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="btnOk">Confirmar</string>
     <string name="btnCancel">"Cancelar    "</string>
+    <string name="txtGaleria">Galeria de Imagenes</string>
 
 
 </resources>

@@ -4,12 +4,22 @@ package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.contenedores;
 
 public class Galeria {
 
-    String descImgGaleria;
-    int imagenGaleria;
+    private String descImgGaleria;
+    private int imagenGaleria;
+    private int imgFrameG;
 
-    public Galeria(String descImgGaleria, int imagenGaleria) {
+    public Galeria(String descImgGaleria, int imagenGaleria, int imgFrameG) {
         this.descImgGaleria = descImgGaleria;
         this.imagenGaleria = imagenGaleria;
+        this.imgFrameG = imgFrameG;
+    }
+
+    public int getImgFrameG() {
+        return imgFrameG;
+    }
+
+    public void setImgFrameG(int imgFrameG) {
+        this.imgFrameG = imgFrameG;
     }
 
     public String getDescImgGaleria() {

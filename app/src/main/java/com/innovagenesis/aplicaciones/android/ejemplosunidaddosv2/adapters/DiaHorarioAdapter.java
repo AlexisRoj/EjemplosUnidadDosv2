@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class DiaHorarioAdapter extends ArrayAdapter<DiaHorario> {
     public DiaHorarioAdapter(Context context, List<DiaHorario> objetos) {
-        super(context, R.layout.list_template, objetos);
+        super(context, R.layout.template_list, objetos);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class DiaHorarioAdapter extends ArrayAdapter<DiaHorario> {
          * al contexto todos los elementos del fragment*/
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
-        View item = inflater.inflate(R.layout.list_template, null);
+        View item = inflater.inflate(R.layout.template_list, null);
 
         TextView titulo = (TextView) item.findViewById(R.id.titulo);
         TextView subtitulo = (TextView) item.findViewById(R.id.subtitulo);
@@ -44,7 +44,7 @@ public class DiaHorarioAdapter extends ArrayAdapter<DiaHorario> {
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
-        View elemento = inflater.inflate(R.layout.list_template, null);
+        View elemento = inflater.inflate(R.layout.template_list, null);
 
         TextView titulo = (TextView) elemento.findViewById(R.id.titulo);
         TextView subtitulo = (TextView) elemento.findViewById(R.id.subtitulo);

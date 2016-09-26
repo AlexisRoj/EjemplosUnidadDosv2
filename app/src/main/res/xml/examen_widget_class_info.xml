@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:initialKeyguardLayout="@layout/examen_widget_class"
-    android:initialLayout="@layout/examen_widget_class"
+    android:initialKeyguardLayout="@layout/widget_examen_class"
+    android:initialLayout="@layout/widget_examen_class"
     android:minHeight="40dp"
     android:minWidth="250dp"
     android:previewImage="@drawable/example_appwidget_preview"

@@ -1,10 +1,14 @@
 package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.adapters;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.R;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.contenedores.Galeria;
 
 import java.util.ArrayList;
@@ -42,8 +46,23 @@ public class GaleriaAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        return null;
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = convertView;
 
+        if (view==null){
+            view = inflater.inflate(R.layout.template_galeria,null);
+        }
 
+        /** Asigna los recursos al template, los extrae del */
+
+        TextView descImgG = (TextView)view.findViewById(R.id.descrImagenG);
+        ImageView imgFrameG = (ImageView)view.findViewById(R.id.imgframe);
+        ImageView imgGaleria = (ImageView)view.findViewById(R.id.imgGaleria);
+
+        descImgG.setText(getItem(position).getDescImgGaleria());
+        imgFrameG.setImageResource(getItem(position).getImgFrameG());
+        imgGaleria.setImageResource(getItem(position).getImagenGaleria());
+
+        return view;
     }
 }
