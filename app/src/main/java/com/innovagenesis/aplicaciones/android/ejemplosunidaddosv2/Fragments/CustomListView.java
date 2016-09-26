@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -41,8 +42,9 @@ public class CustomListView extends Fragment {
         View view = inflater.inflate(R.layout.fragment_custom_list_view, container, false);
 
 
-        String[] titulos = getActivity().getResources().getStringArray(R.array.horario_de_clases);
+        final String[] titulos = getActivity().getResources().getStringArray(R.array.horario_de_clases);
         String[] subtitulos = getActivity().getResources().getStringArray(R.array.dias_semana);
+        final TextView tituloFragment = (TextView)view.findViewById(R.id.titleCustomListview);
 
         lista = new ArrayList<>();
 
@@ -53,8 +55,15 @@ public class CustomListView extends Fragment {
         DiaHorarioAdapter adapter = new DiaHorarioAdapter(getActivity(), lista);
 
         horario = (ListView) view.findViewById(R.id.custom_listView);
+        tituloFragment.setText("Selecione una opcion del menu:");
 
         horario.setAdapter(adapter);
+        horario.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                tituloFragment.setText("El item selecionado es: " + titulos[position]);
+            }
+        });
 
         return view;
     }

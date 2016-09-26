@@ -36,7 +36,7 @@ public class CustomSpinner extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_custom_spinner, container, false);
 
-        String[] titulos = getActivity().getResources().getStringArray(R.array.horario_de_clases);
+        final String[] titulos = getActivity().getResources().getStringArray(R.array.horario_de_clases);
         String[] subTitulos = getActivity().getResources().getStringArray(R.array.dias_semana);
 
         listaElementos = new ArrayList<>();
@@ -52,10 +52,14 @@ public class CustomSpinner extends Fragment {
         spinner = (Spinner) view.findViewById(R.id.custom_spinner);
         spinner.setAdapter(adapter);
 
+        final TextView titleFragment = (TextView)view.findViewById(R.id.titleCustomSpinner);
+        titleFragment.setText(R.string.tituloListView);
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
+                titleFragment.setText(titulos[position]);
             }
 
             @Override

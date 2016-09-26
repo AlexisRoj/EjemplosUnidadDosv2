@@ -14,6 +14,8 @@
 
     <color name="colorMenu">#2196F3</color>
     <color name="colorComplemento">#1565C0</color>
+    <color name="colorGrisMenu">#536D7A</color>
+    <color name="colorRojoMenu">#ED6E48</color>
 
 </resources>
 

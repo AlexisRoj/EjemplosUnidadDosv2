@@ -1,21 +1,17 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.SimpleListView">
+    android:orientation="vertical">
 
-     <TextView
-         android:id="@+id/textListview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <TextView
+        android:id="@+id/textListview"
+        style="@style/titleLayout" />
 
     <ListView
+        android:id="@+id/simple_listView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/simple_listView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:layout_marginTop="41dp" />
 
-</RelativeLayout>
+</LinearLayout>

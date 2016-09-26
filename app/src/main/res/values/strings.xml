@@ -175,6 +175,7 @@
     <string name="btnCancel">"Cancelar    "</string>
     <string name="txtGaleria">Galeria de Imagenes</string>
     <string name="strSegundaActivity">La segunda Actividad fue ejecutada</string>
+    <string name="tituloListView">Selecione una opcion</string>
 
 
 </resources>
