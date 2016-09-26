@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setTitle("El titulo");*/
 
-        final MiscelaneosFragment cambiar = new MiscelaneosFragment();
+        final MiscelaneosFragment cambiar = new MiscelaneosFragment(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab != null;

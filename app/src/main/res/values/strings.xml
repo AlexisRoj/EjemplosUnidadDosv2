@@ -123,6 +123,8 @@
     <string name="btnAddCount">Crear Cuenta</string>
     <string name="msgWorking">Esta funcion aún no ha sido implementada</string>
     <string name="appwidget_text">EXAMPLE</string>
+    <string name="btnOk">Confirmar</string>
+    <string name="btnCancel">"Cancelar    "</string>
 
 
 </resources>

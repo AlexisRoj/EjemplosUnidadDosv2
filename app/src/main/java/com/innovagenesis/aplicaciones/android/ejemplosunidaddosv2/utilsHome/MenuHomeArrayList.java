@@ -71,7 +71,7 @@ public class MenuHomeArrayList extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                MiscelaneosFragment cambiar = new MiscelaneosFragment();
+                MiscelaneosFragment cambiar = new MiscelaneosFragment(getContext());
                 Fragment fragment;
                 Intent intent;
 

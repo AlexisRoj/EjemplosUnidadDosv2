@@ -58,7 +58,7 @@ public class MenuHomeGrid extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                MiscelaneosFragment cambiar = new MiscelaneosFragment();
+                MiscelaneosFragment cambiar = new MiscelaneosFragment(getContext());
                 Fragment fragment;
                 Intent intent;
 
