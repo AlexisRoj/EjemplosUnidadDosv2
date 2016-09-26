@@ -45,6 +45,8 @@ public class GaleriaGrid extends Fragment {
 
     private ArrayList<Galeria> contenidoGrid() {
 
+        /** Elementos que van a ser cargados con el template*/
+
         String[] descImgG = getResources().getStringArray(R.array.descGaleria);
         TypedArray imgGaleria = getResources().obtainTypedArray(R.array.imgGaleria);
         TypedArray imgFrameG = getResources().obtainTypedArray(R.array.frameGaleria);

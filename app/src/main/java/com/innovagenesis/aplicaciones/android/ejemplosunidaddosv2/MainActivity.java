@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Fragment fragment = new MenuHomeArrayList(); Administra quien ejecuta el menu principal
 
-    Fragment fragment = new GaleriaGrid(); //MenuHomeGrid();
+    Fragment fragment = new MenuHomeGrid();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

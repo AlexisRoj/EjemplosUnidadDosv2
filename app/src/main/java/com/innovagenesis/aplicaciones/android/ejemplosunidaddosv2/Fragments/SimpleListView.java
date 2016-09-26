@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -35,8 +36,10 @@ public class SimpleListView extends Fragment {
 
 
 
-         String[] titulos = getResources().getStringArray(R.array.horario_de_clases);
+        final String[] titulos = getResources().getStringArray(R.array.horario_de_clases);
         String[] subtitulos = getResources().getStringArray(R.array.dias_semana);
+
+        final TextView textView = (TextView)view.findViewById(R.id.textListview);
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, titulos);
@@ -46,6 +49,14 @@ public class SimpleListView extends Fragment {
 
         horario.setAdapter(adapter);
 
+        horario.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                textView.setText("Seleciono: " + titulos[position]);
+
+            }
+        });
 
 
 

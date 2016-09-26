@@ -18,6 +18,7 @@
         <item>Ejecutar Activity y comunicacion</item>
         <item>Intent Implicito</item>
         <item>Intent Llamada</item>
+        <item>Galeria de Examen</item>
 
     </string-array>
     <!-- Subtitulos del Menu principal-->
@@ -31,6 +32,7 @@
         <item>Ej. ejecuta una activity y le envia datos</item>
         <item>Ej. ejecuta un itent a URL</item>
         <item>Ej. ejecuta el Dial del telefono</item>
+        <item>Ej. La galeria parte del examen</item>
 
     </string-array>
 
@@ -96,11 +98,13 @@
         <item>@drawable/menu1</item>
         <item>@drawable/menu2</item>
         <item>@drawable/menu3</item>
+        <item>@drawable/menu4</item>
 
     </array>
 
     <!-- Imagenes menu no se borra para mantener el ejemplo-->
     <string-array name="numeroImagen">
+        <item> </item>
         <item> </item>
         <item> </item>
         <item> </item>
@@ -170,6 +174,7 @@
     <string name="btnOk">Confirmar</string>
     <string name="btnCancel">"Cancelar    "</string>
     <string name="txtGaleria">Galeria de Imagenes</string>
+    <string name="strSegundaActivity">La segunda Actividad fue ejecutada</string>
 
 
 </resources>

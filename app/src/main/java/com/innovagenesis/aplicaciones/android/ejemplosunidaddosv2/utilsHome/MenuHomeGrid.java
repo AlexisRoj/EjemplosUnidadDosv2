@@ -23,6 +23,7 @@ import android.widget.GridView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomGrid;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomListView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.CustomSpinner;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.GaleriaGrid;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleListView;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.SimpleSpinner;
 import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.MiscelaneosFragment;
@@ -131,6 +132,12 @@ public class MenuHomeGrid extends Fragment {
                         /** Ejecuta un intent llamada **/
                         intent = new Intent(Intent.ACTION_DIAL);
                         startActivity(intent);
+                        break;
+                    }
+                    case 8: {
+                        /** Ejecuta la galeria del examen **/
+                        fragment = new GaleriaGrid();
+                        cambiar.remplazarFragment(fragment, getActivity()).commit();
                         break;
                     }
 
