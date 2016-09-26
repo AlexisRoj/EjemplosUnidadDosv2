@@ -54,22 +54,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
                 /** Inicializa elemento Booleando y lo compara en el metodo para verificar si se procede o no */
 
+            Snackbar.make(v,"Atencion",Snackbar.LENGTH_SHORT)
+                    .setAction("Precione aquí para continuar", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            lanzarActivity();
+                        }
+                    })
+                    .show();
 
-
-                validar = util.confirmacionAccion("Advertencia",
-                        "Realmente desea continuar",
-                        Login.this);
-
-
-                Log.i("Validar", String.valueOf(validar));
-               /* if (validar) {
-
-
-                } else {
-                    Toast.makeText(Login.this, "Accion Cancelada", Toast.LENGTH_SHORT).show();
-                }
-
-                checkBox.setChecked(false);*/
                 break;
             }
             case R.id.btn_addUser: {

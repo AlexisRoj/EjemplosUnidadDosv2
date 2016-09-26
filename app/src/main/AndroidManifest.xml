@@ -22,7 +22,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/imagen_widget_info" />
+                android:resource="@xml/widget_imagen_info" />
         </receiver>
         <receiver
             android:name="layout.TextWidgetClass"
@@ -33,7 +33,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/text_widget_class_info" />
+                android:resource="@xml/widget_text_class_info" />
         </receiver>
 
         <activity android:name=".SegundaActivity" />
@@ -52,7 +52,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/examen_widget_class_info" />
+                android:resource="@xml/widget_examen_class_info" />
         </receiver>
     </application>
 

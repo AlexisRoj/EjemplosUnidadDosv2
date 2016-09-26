@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*ActionBar actionBar = getSupportActionBar();
+   /*     ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
-        actionBar.setTitle("El titulo");*/
-
+        actionBar.setTitle("El titulo");
+*/
         final MiscelaneosFragment cambiar = new MiscelaneosFragment(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

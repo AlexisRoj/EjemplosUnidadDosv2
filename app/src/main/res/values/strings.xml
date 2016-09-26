@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ejemplos Unidad Dos v2</string>
+    <string name="app_name">Biblioteca Unidad Dos</string>
     <string name="action_settings">Settings</string>
     <string name="label">Widget con Imagen</string>
     <string name="label2">Widget con Texto</string>
