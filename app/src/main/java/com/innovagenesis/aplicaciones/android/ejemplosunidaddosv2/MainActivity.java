@@ -3,17 +3,22 @@ package com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome.MenuHome;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.Fragments.GaleriaGrid;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome.MenuHomeArrayList;
+import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.utilsHome.MenuHomeGrid;
 
 public class MainActivity extends AppCompatActivity {
 
-    Fragment fragment = new MenuHome();
+    //Fragment fragment = new MenuHomeArrayList(); Administra quien ejecuta el menu principal
+
+    Fragment fragment = new MenuHomeGrid();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +27,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final MiscelaneosFragment cambiar = new MiscelaneosFragment();
+   /*     ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setTitle("El titulo");
+*/
+        final MiscelaneosFragment cambiar = new MiscelaneosFragment(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab != null;
@@ -62,4 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

@@ -49,7 +49,7 @@ public class CalendarioAdapter extends BaseAdapter {
         View view = convertView;
 
         if (convertView == null) {
-            view = inflater.inflate(R.layout.grid_template, null);
+            view = inflater.inflate(R.layout.template_grid, null);
         }
 
         /** Adjunta elementos desde el template */

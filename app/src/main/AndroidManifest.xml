@@ -11,13 +11,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <receiver
             android:name="layout.ImageWidgetClass"
@@ -28,7 +22,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/imagen_widget_info" />
+                android:resource="@xml/widget_imagen_info" />
         </receiver>
         <receiver
             android:name="layout.TextWidgetClass"
@@ -39,10 +33,27 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/text_widget_class_info" />
+                android:resource="@xml/widget_text_class_info" />
         </receiver>
 
-        <activity android:name=".SegundaActivity"></activity>
+        <activity android:name=".SegundaActivity" />
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="layout.ExamenWidgetClass">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_examen_class_info" />
+        </receiver>
     </application>
 
 </manifest>

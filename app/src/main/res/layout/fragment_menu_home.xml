@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/fragment_menu_home"
     android:background="#D1C4E9"
-    tools:context=".utilsHome.MenuHome">
+    tools:context=".utilsHome.MenuHomeArrayList">
 
     <TextView
         android:layout_width="match_parent"

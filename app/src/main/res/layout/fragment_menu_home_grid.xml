@@ -7,10 +7,9 @@
     <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/grid"
-        android:numColumns="3"
+        android:numColumns="1"
+        android:id="@+id/menuGrid"
         android:horizontalSpacing="3dp"
         android:verticalSpacing="3dp"
-        android:stretchMode="columnWidth"
-        />
+        android:stretchMode="columnWidth"/>
 </LinearLayout>

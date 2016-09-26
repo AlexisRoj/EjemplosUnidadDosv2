@@ -1,26 +1,24 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment_cutomLisview"
-    android:background="#E3F2FD"
-    tools:context=".Fragments.CustomListView">
+    android:background="#C5E1A5"
+    tools:context=".Fragments.CustomListView"
+    android:orientation="vertical">
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/opcion"
-        android:text="@string/hello_blank_fragment"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp" />
+
+        style="@style/titleLayout"
+        android:id="@+id/titleCustomListview"
+  />
 
     <ListView
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/custom_listView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:layout_marginTop="36dp" />
 
-</RelativeLayout>
+</LinearLayout>

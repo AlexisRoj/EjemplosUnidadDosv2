@@ -33,11 +33,11 @@ import com.innovagenesis.aplicaciones.android.ejemplosunidaddosv2.contenedores.C
 
 import java.util.ArrayList;
 
-public class MenuHome extends Fragment {
+public class MenuHomeArrayList extends Fragment {
 
     int ID = 1;
 
-    public MenuHome() {
+    public MenuHomeArrayList() {
         // Required empty public constructor
     }
 
@@ -71,7 +71,7 @@ public class MenuHome extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                MiscelaneosFragment cambiar = new MiscelaneosFragment();
+                MiscelaneosFragment cambiar = new MiscelaneosFragment(getContext());
                 Fragment fragment;
                 Intent intent;
 
@@ -87,7 +87,7 @@ public class MenuHome extends Fragment {
                     }
                     case 1: {
                         /** Ejecuta el ejemplo de un ListView custom **/
-                        fragment = new CustomListView();
+                        fragment = new MenuHomeGrid();//CustomListView();
                         cambiar.remplazarFragment(fragment, getActivity()).commit();
                         break;
                     }

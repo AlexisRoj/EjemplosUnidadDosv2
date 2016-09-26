@@ -43,6 +43,7 @@ public class CustomGrid extends Fragment {
         ArrayList<Calendario> lista = new ArrayList<>();
 
         for (int i = 0; i < meses.length; i++) {
+
             lista.add(new Calendario(imagenes.getResourceId(i, 0), meses[i]));
         }
         return lista;
